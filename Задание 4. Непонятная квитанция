@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main(){
+    int totalCost = 4000000;
+    int apartaments = 40;
+    int entrance = 10; 
+    int costTenant = (totalCost/apartaments)/entrance;
+
+    std::cout << "Привествуем вас в приложенииподсчета квитанции!\n";
+    std::cout << "Введите сумму указанную в квитанции:" <<totalCost<< "\n";
+    std::cout << "Сколько подьездов в вашем доме: " <<entrance<< "\n";
+    std::cout << "Сколько квартир в каждомподьезде: " <<apartaments<< "\n";
+    std::cout << "----------Считаем-----------\n";
+    std::cout << "Каждая квартира должна заплатить: " <<costTenant<< "руб\n";
+}

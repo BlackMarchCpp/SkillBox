@@ -1,0 +1,75 @@
+#include <iostream>
+
+int main(){
+    int numberBus;
+
+    std::cout << "Добро пожаловать в ВашМаршрут! \n";
+    std::cout <<"Введите ваше имя: \n";
+    std::string  userName;
+    std::cin >> userName;
+    std::cout <<"На каком маршруте поедем сегодня " <<userName<< "? \n";
+    std::cin >> numberBus;
+    std::cout << "Вы выбрали маршрут " <<numberBus<< "! \n";
+
+    int ticketBus = 20;
+    int howPassengers = 0;
+    int totalProfit = 0;
+
+    std::cout <<"На какой остановке вы сели: \n";
+    std::string stops;
+    std::cin >> stops;
+    
+
+while (true)
+{
+    std::cout <<"Прибываем на остановку "<<stops<< ". В салоне пассажиров "<<howPassengers<< ". \n";
+    int passengersEntered;
+    std::cout << "Сколько пассажиров село в автобус: \n";
+    std::cin >> passengersEntered;
+
+    int passengersOut;
+    std::cout << "Сколько пассажиров вышло из автобуса: \n";
+    std::cin >> passengersOut;
+    
+
+    howPassengers = howPassengers+passengersEntered - passengersOut;
+
+    int currentProfit;
+    currentProfit = ticketBus * passengersEntered;
+    totalProfit+=currentProfit;
+
+    std::cout << "Отправляемся с остановки " <<stops<< ". В салоне " <<howPassengers<< " пассажира. \n";
+    std::cout << "Прибыль на этой остановке " <<currentProfit<< " руб. Общая прибыль составила: " <<totalProfit<< " руб. \n"; 
+
+    std::cout << "----------------Едем дальше------------------\n";
+    std::cout << "Введите следующую остановку или напишите exit для окончания маршрута. \n";
+    std::cin >> stops;
+if(stops == "exit"){
+
+    std::cout <<"Вы приехали в пункт назначения. Благодарим за использование приложения \n";
+    break;
+}
+
+}
+    int driverSalary;
+driverSalary = totalProfit/4;
+std::cout<< "----Заработок и расходы----\n";
+std::cout<< "Зарплата водителя: " <<driverSalary<< ". \n";
+
+int fuelConsumption;
+fuelConsumption = totalProfit/5;
+std::cout<< "Затраты на топливо: " <<fuelConsumption<< ". \n";
+
+int taxExpenses;
+taxExpenses = totalProfit/5;
+std::cout << "Затраты на налоги: " <<taxExpenses<< ". \n";
+
+int repairCosts;
+repairCosts = totalProfit/5;
+std::cout << "Затраты на ремонт: " <<repairCosts<< ". \n";
+
+int netProfit;
+netProfit = totalProfit -(driverSalary+fuelConsumption+taxExpenses+repairCosts);
+std::cout <<"Чистая прибыль: " <<netProfit;
+
+}

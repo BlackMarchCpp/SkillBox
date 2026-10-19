@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main (){
+
+    int a;
+    int b;
+    int summ;
+
+    cout << "Введите первое значение: \n";
+    cin >> a;
+    cout << "Введите второе значение: \n";
+    cin >> b;
+    cout << "Введите сумму значений: \n";
+    cin >> summ;
+
+    if (a+b == summ) {
+        cout << "Верно первое число плюс второе ровняеться " <<summ<< ". \n";
+    } else if (a+b != summ){
+        cout <<"Неверно! первое число плюс второе число не ровняеться " <<summ<< ". \n";
+    }
+
+
+    
+}

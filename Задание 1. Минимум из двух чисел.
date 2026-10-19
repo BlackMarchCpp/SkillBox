@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main (){
+
+    int a;
+    int b;
+
+    std::cout << "Введите первое число:  \n";
+    std::cin >> a;
+
+    std::cout << "Введите второе число: \n";
+    std::cin >> b;
+
+    if (a<b){
+        std::cout << "Наименьшее число \n" <<a;
+    } 
+    else if (b<a){
+        std::cout << "Наименьшее число \n" <<b;
+    } 
+    else {
+        std::cout << "Числа равны!\n";
+    }
+}

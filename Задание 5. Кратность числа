@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int main (){
+
+    int a;
+    int b;
+    int divide;
+
+    cout <<"Введите первое значение: \n";
+    cin >> a;
+
+    cout <<"Введите второе значение: \n";
+    cin >> b;
+
+    
+    if (divide=a % b==0){
+        cout << "Да, " <<a<< " делится на " <<b<< ". Без остатка! \n";
+
+    } else if(divide=a % b!=0) {
+        cout << "Нет, " <<a<< " не делиться на " <<b<< " без остатка! \n";
+    }
+}

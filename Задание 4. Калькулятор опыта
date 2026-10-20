@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int levelPlayer=1;
+int experienceGained;
+
+int main (){
+    cout << "Ваш уровень: " <<levelPlayer<< ". \n";
+    cout << "Введите получаемый опыт: \n";
+    cin >> experienceGained;
+
+    if (experienceGained < 0){
+
+        cout << "Вы ввели отрицательное значение опыта. Введите положительное! \n";
+    }
+
+    cout <<"---------Считаем---------\n";
+
+        int level;
+    if (experienceGained<1000){
+        level = 1;
+    }else if (experienceGained<2500){
+        level = 2; 
+    }else if (experienceGained<5000){
+        level=3;   
+    }else{
+        level=4;
+    }
+    
+    cout <<"Ваш уровень равен " <<level<< ". \n";
+}

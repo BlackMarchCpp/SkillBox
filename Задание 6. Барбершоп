@@ -1,0 +1,44 @@
+#include <iostream>
+
+int main (){
+    
+    int manCiti;
+    int timeService = 1;
+    int barberShift = 8;
+    int barber;
+    int daysInMonth = 30;
+
+    std::cout << "Сколько всего мужчин проживает в городе? \n";
+    std::cin >> manCiti;
+
+    std::cout << "Сколько всего барберов уже работает? \n";
+    std::cin >> barber;
+    
+    int clientsPerBarber;
+
+    clientsPerBarber = barberShift*daysInMonth;
+
+    int totalClientsAvailable;
+
+    totalClientsAvailable =barber *clientsPerBarber;
+    
+    if (manCiti>totalClientsAvailable){
+        int barberNeeded;
+        barberNeeded = manCiti / clientsPerBarber;
+
+        if (manCiti%clientsPerBarber !=0){
+
+            barberNeeded + 1;
+        }
+
+        int barbersToHiire;
+
+        barbersToHiire = barberNeeded-barber;
+        
+        std::cout << "Барберов недостаточно! Вам нужно нанять еще как минимум " <<barberNeeded<< " барберов. \n";
+
+    }
+    else {
+        std::cout <<"Барберов хватает! \n";
+    }
+}

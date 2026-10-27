@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int day;
+    int startDay;
+
+    cout << "Введите номер дня в мае (от 1 до 31): ";
+    cin >> day;
+
+    cout << "Введите день недели, с которого начинается май (1-Пн, 2-Вт ... 7-Вс): ";
+    cin >> startDay;
+
+    if (day < 1 || day > 31) {
+        cout << "Ошибка: в мае 31 день. Введите число от 1 до 31. \n";
+    } 
+    else if (startDay < 1 || startDay > 7) {
+        cout << "Ошибка: в неделе 7 дней. Введите число от 1 до 7. \n";
+    } 
+    else {
+        
+        int currentWeekday = (startDay + day - 2) % 7 + 1;
+
+        bool isHoliday = (day >= 1 && day <= 5) || (day >= 8 && day <= 10);
+        
+        bool isWeekend = (currentWeekday == 6 || currentWeekday == 7);
+
+        if (isHoliday || isWeekend) {
+            cout << "Выходной \n";
+        } else {
+            cout << "Рабочий \n";
+        }
+    }
+    
+}

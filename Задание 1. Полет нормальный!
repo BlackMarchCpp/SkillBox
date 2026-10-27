@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main () {
+
+    int speedPlane;
+    int flightAltitude;
+
+    cout<< "Введите скорость самолета: \n";
+    cin >> speedPlane;
+
+    cout << "Введите высоту самолета: \n";
+    cin >> flightAltitude;
+
+    if (speedPlane< 750 && speedPlane > 850){
+
+    } else if (flightAltitude<9000 && flightAltitude>9500){
+        cout << "Самолет летит не правильным эшелоном. \n";
+    } else {
+        cout << "Самолет летит правильным эшелоном ";
+    }
+}

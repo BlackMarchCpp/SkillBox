@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int d, m, y;
+    int bd, bm, by;
+
+    cin >> d >> m >> y;
+    cin >> bd >> bm >> by;
+
+    int today = y * 10000 + m * 100 + d;
+    int adultDate = (by + 18) * 10000 + bm * 100 + bd;
+
+    if (today > adultDate) {
+        cout << "можно \n";
+    } else {
+        cout << "нельзя \n";
+    }
+    return 0;
+}

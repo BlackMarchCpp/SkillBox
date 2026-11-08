@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    
+    long long number; 
+    int count = 0; 
+
+    cout << "Введите число: ";
+    cin >> number;
+
+    if (number < 0) {
+        number = -number; 
+    }
+
+    if (number == 0) {
+        count = 1;
+    } else {
+
+        while (number > 0) {
+            number = number / 10; 
+            count++;             
+        }
+    }
+
+    cout << "Цифр в числе: " << count<< ".\n";
+
+    return 0;
+}

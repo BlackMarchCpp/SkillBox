@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n; 
+    cout << "Введите номер последовательности: ";
+    cin >> n;
+
+    if (n < 1) {
+        cout << "Ошибка: номер должен быть положительным числом.\n";
+         
+    }
+
+    
+    long long a = 1; 
+    long long b = 1; 
+    long long current = 0; 
+
+    
+    if (n == 1 || n == 2) {
+        cout << "Число в последовательности: 1 \n";
+    } else {
+        
+        for (int i = 3; i <= n; i++) {
+            current = a + b; 
+            a = b;           
+            b = current;     
+        }
+        cout << "Число в последовательности: " << current << "\n";
+    }
+
+
+}

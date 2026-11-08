@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    
+    long long x; 
+    int p;       
+    long long y; 
+
+    
+    cout << "Введите размер вклада: ";
+    cin >> x;
+    cout << "Введите процентную ставку: ";
+    cin >> p;
+    cout << "Введите желаемую сумму: ";
+    cin >> y;
+
+    if (x <= 0 || p <= 0 || y <= 0) {
+        cout << "Ошибка: все значения должны быть положительными. \n";
+       
+    }
+
+    int years = 0;
+
+    
+    while (x < y) {
+        
+        long long profit = (x * p) / 100;
+        x = x + profit;
+        years++;
+    }
+
+    cout << "Придется подождать: " << years << " лет" << endl;
+
+  
+}

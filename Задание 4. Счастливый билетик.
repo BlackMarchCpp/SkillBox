@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    long long ticket; 
+    
+    cout << "Введите номер билета: ";
+    cin >> ticket;
+
+    int left_sum = 0;
+    int right_sum = 0;
+    
+    long long temp = ticket;
+    int total_digits = 0;
+    
+    while (temp > 0) {
+        total_digits++;
+        temp /= 10;
+    }
+
+    int half = total_digits / 2; 
+    
+    temp = ticket; 
+    for (int i = 0; i < half; i++) {
+        right_sum += temp % 10; 
+        temp /= 10;             
+    }
+
+
+    for (int i = 0; i < half; i++) {
+        left_sum += temp % 10;  
+        temp /= 10;
+    }
+
+    if (left_sum == right_sum) {
+        cout << "Билет счастливый!\n";
+    } else {
+        cout << "Повезёт в следующий раз!\n";
+    }
+
+}

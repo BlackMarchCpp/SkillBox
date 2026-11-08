@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string name;
+    double debt;
+
+    cout << "Имя: ";
+    cin >> name;
+    cout << "Долг: ";
+    cin >> debt;
+
+    if (debt <= 0) {
+        cout << "Ошибка";
+    }
+
+    while (debt > 0) {
+        double payment;
+        cout << "Сумма: ";
+        cin >> payment;
+
+        bool ok = (payment >= 0);
+
+        if (ok) {
+            debt -= payment;
+            if (debt > 0) cout << "Остаток: " << debt << "\n";
+            else if (debt < 0) cout << "Сдача: " << -debt << "\n";
+            else cout << "Долг погашен" << "\n";
+        } else {
+            cout << "Cумма не может быть отрицательной" << endl;
+        }
+    }
+    
+}

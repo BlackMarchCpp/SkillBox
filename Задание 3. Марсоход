@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int x = 10; 
+    int y = 7;  
+
+   
+    while (true) {
+       
+        cout << "[Программа]: Марсоход находится на позиции " << x << ", " << y << ", введите команду: \n";
+        cout << "[Оператор]: ";
+        
+        char command;
+        cin >> command;
+
+        if (command == 'W' || command == 'w') {
+           
+            if (y < 15) { 
+                y++;
+            } else {
+                cout << "[Программа]: Упёрся в северную стену! \n";
+            }
+        } 
+        else if (command == 'S' || command == 's') {
+           
+            if (y > 0) { 
+                y--;
+            } else {
+                cout << "[Программа]: Упёрся в южную стену! \n" ;
+            }
+        } 
+        else if (command == 'D' || command == 'd') {
+            
+            if (x < 20) { 
+                x++;
+            } else {
+                cout << "[Программа]: Упёрся в восточную стену! \n";
+            }
+        } 
+        else if (command == 'A' || command == 'a') {
+           
+            if (x > 0) { 
+                x--;
+            } else {
+                cout << "[Программа]: Упёрся в западную стену! /n";
+            }
+        } 
+        else {
+            cout << "[Программа]: Ошибка ввода! Введите W, A, S или D. \n" ;
+        }
+    }
+}

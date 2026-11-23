@@ -1,0 +1,26 @@
+#include <iostream> 
+
+using namespace std;
+
+int main() {
+
+    int totalGrecka = 100;
+    int consumption = 4;
+    int monthsTotal = totalGrecka/consumption;
+
+    cout << "Всего гречки было: " << totalGrecka<< "кг. \n";
+
+    for (int month=1; month <= monthsTotal; month++) {
+
+      totalGrecka -= consumption;
+        
+        if (totalGrecka > 0) {
+            
+            cout << "После " << month << " месяца у вас в запасе останется " 
+                 << totalGrecka << " кг гречки\n";
+        } else {
+            cout << "После " << month << " месяца гречка закончится\n";
+            break; 
+        }
+    }
+        }

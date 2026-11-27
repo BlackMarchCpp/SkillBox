@@ -1,0 +1,46 @@
+#include <iostream>
+
+int main() {
+   
+    const int width = 20;
+    const int height = 15;
+
+    
+    int center_x = width / 2;
+    int center_y = height / 2;
+    
+    for (int row = 0; row < height; ++row) {
+        
+        for (int col = 0; col < width; ++col) {
+            
+            if (row == center_y && col == center_x) {
+                std::cout << "+";
+            }
+            
+            else if (row == 0 && col == center_x) {
+                std::cout << "^";
+            }
+           
+            else if (row == center_y && col == width - 1) {
+                std::cout << ">";
+            }
+           
+            else if (col == center_x) {
+                std::cout << "|";
+            }
+            
+            else if (row == center_y) {
+                std::cout << "-";
+            }
+            
+            else {
+                std::cout << " ";
+            }
+        }
+        
+    
+        std::cout << std::endl;
+    }
+
+    
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+
+int main() {
+    int total_length, exclamation_count;
+    
+    do {
+        std::cout << "Введите общую длину колонтитула: ";
+        std::cin >> total_length;
+    } while (total_length <= 0);
+
+    do {
+        std::cout << "Введите количество восклицательных знаков: ";
+        std::cin >> exclamation_count;
+    } while (exclamation_count < 0 || exclamation_count > total_length);
+
+    int total_tildes = total_length - exclamation_count;
+
+    int left_tildes = total_tildes / 2;
+    int right_tildes = total_tildes - left_tildes;
+
+    for (int i = 0; i < left_tildes; ++i) {
+        std::cout << "~";
+    }
+
+    for (int i = 0; i < exclamation_count; ++i) {
+        std::cout << "!";
+    }
+
+    for (int i = 0; i < right_tildes; ++i) {
+        std::cout << "~";
+    }
+
+    std::cout << std::endl;
+
+}
